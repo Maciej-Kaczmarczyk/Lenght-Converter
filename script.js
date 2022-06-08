@@ -2,15 +2,19 @@
 
 
 let converter = {
+   /* Declaring the variables. */
     option1: undefined,
     option2: undefined,
     input: undefined,
     kilometers: undefined,
     result: undefined,
+    /* A function that is called when the button is clicked. */
     calculate: function(){
+        /* Getting the value of the select element. */
         this.option1 = document.getElementById("option1").value;
         this.option2 = document.getElementById("option2").value;
         this.input = document.getElementById("input").value;
+        /* Converting the input to kilometers. */
         switch(this.option1){
             case"meter":
             this.kilometers =input.value*0.001;
@@ -50,6 +54,7 @@ let converter = {
             break;
         }
     },
+    /* Converting the kilometers to the selected unit. */
     output: function(kilometers){
         switch(this.option2){
             case"meter":
